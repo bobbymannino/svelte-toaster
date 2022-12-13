@@ -1,0 +1,42 @@
+{
+  "name": "@bobbymannino/svelte-toaster",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "1.0.0-next.90",
+    "@sveltejs/kit": "1.0.0-next.584",
+    "@sveltejs/package": "1.0.0-next.6",
+    "svelte": "^3.54.0",
+    "svelte-check": "^2.10.2",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.1"
+  },
+  "type": "module",
+  "homepage": "https://bobbymannino.vercel.app/svelte-toaster",
+  "description": "A notification system that's: TypeScript First, Customizable, Easy To Use, & Animated",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bobbymannino/svelte-toaster"
+  },
+  "author": {
+    "email": "manninobobby@icloud.com",
+    "name": "Bobby Mannino"
+  },
+  "keywords": [
+    "toaster",
+    "notifications",
+    "svelte",
+    "sveltekit"
+  ],
+  "bugs": {
+    "url": "https://github.com/bobbymannino/svelte-toaster/issues"
+  },
+  "exports": {
+    "./package.json": "./package.json",
+    "./.DS_Store": "./.DS_Store",
+    "./Toast": "./Toast.js",
+    "./Toaster.svelte": "./Toaster.svelte",
+    ".": "./index.js"
+  },
+  "svelte": "./index.js"
+}
