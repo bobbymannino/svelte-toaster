@@ -1,7 +1,8 @@
 import { SvelteComponentTyped } from "svelte";
 declare const __propDef: {
     props: {
-        placement?: "top-left" | "top-middle" | "top-right" | "bottom-left" | "bottom-middle" | "bottom-right" | undefined;
+        xPlacement?: "left" | "middle" | "right" | undefined;
+        yPlacement?: "top" | "bottom" | undefined;
     };
     events: {
         [evt: string]: CustomEvent<any>;

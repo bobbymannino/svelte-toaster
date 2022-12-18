@@ -41,10 +41,10 @@ npm install --save-dev @bobbymannino/svelte-toaster
 <!-- +page.svelte -->
 
 <script lang="ts">
-	import { Slice } from "@bobbymannino/svelte-toaster";
+	import { toaster } from "@bobbymannino/svelte-toaster";
 
 	function newToast() {
-		new Slice({ body: "Hi there!" });
+		toaster.toast("DON'T BURN ME!");
 	}
 </script>
 
@@ -58,19 +58,20 @@ npm install --save-dev @bobbymannino/svelte-toaster
 ```html
 <!-- +layout.svelte -->
 
-<Toaster placement="top-left" />
+<Toaster xPlacement="right" yPlacement="top" />
 ```
 
-| Property Name | Property Type                                                                                   | Property Default |
-| :------------ | :---------------------------------------------------------------------------------------------- | :--------------- |
-| placement     | 'top-left' \| 'top-right' \| 'middle-left' \| 'middle-right' \| 'bottom-left' \| 'bottom-right' | 'bottom-left'    |
+| Property Name | Property Type                 | Property Default |
+| :------------ | :---------------------------- | :--------------- |
+| xPlacement    | 'left' \| 'middle' \| 'right' | 'left'           |
+| yPlacement    | 'bottom' \| 'top'             | 'bottom'         |
 
 ```html
 <!-- +page.svelte -->
 
 <script lang="ts">
 	function newToast() {
-		new Slice({ body: "Hi there!", type: "error", icon: false, duration: 10000 });
+		toaster.toast("hi there", { type: "error", icon: false, duration: 10000, colorful: true });
 	}
 </script>
 ```
@@ -80,6 +81,7 @@ npm install --save-dev @bobbymannino/svelte-toaster
 | type          | 'error' \| 'success' \| 'warning' \| 'help' | 'help'           |
 | icon          | boolean                                     | true             |
 | duration      | number                                      | 7000             |
+| colorful      | boolean                                     | false            |
 
 ---
 
