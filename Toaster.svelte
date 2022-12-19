@@ -1,22 +1,19 @@
 <script>import { toaster } from "./toast";
 import Toast from "./Toast.svelte";
 import { quadInOut } from "svelte/easing";
-import { scale, fly } from "svelte/transition";
 import { flip } from "svelte/animate";
-const ANIMATION_DURATION = 250;
-const ANIMATION_TIMING = quadInOut;
-const ANIMATION_X = -24;
+import { grow } from "./transitions";
+const options = {
+  duration: 300,
+  easing: quadInOut
+};
 export let xPlacement = "left";
 export let yPlacement = "bottom";
 </script>
 
 <ul data-x-placement={xPlacement} data-y-placement={yPlacement}>
 	{#each $toaster as toast (toast.id)}
-		<li
-			out:scale={{ duration: ANIMATION_DURATION, easing: ANIMATION_TIMING }}
-			in:fly={{ duration: ANIMATION_DURATION, easing: ANIMATION_TIMING, x: ANIMATION_X }}
-			animate:flip={{ duration: ANIMATION_DURATION, easing: ANIMATION_TIMING }}
-		>
+		<li transition:grow={{ ...options, y: 24 }} animate:flip={options}>
 			<Toast {toast} />
 		</li>
 	{/each}
@@ -28,28 +25,32 @@ export let yPlacement = "bottom";
 		z-index: 9999;
 		list-style: none;
 		display: flex;
-		flex-direction: column;
 		gap: 0.5rem;
 	}
 
 	ul[data-x-placement="left"] {
 		left: 1rem;
+		align-items: flex-start;
 	}
 
 	ul[data-x-placement="middle"] {
 		left: 50%;
 		transform: translateX(-50%);
+		align-items: center;
 	}
 
 	ul[data-x-placement="right"] {
 		right: 1rem;
+		align-items: flex-end;
 	}
 
 	ul[data-y-placement="bottom"] {
 		bottom: 1rem;
+		flex-direction: column-reverse;
 	}
 
 	ul[data-y-placement="top"] {
 		top: 1rem;
+		flex-direction: column;
 	}
 </style>

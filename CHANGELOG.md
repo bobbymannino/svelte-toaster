@@ -1,5 +1,10 @@
 # **Changelog**
 
+## **v1.1.3**
+
+-   [ui] changed the animation to be more subtle
+-   [ui] align toast to x placement
+
 ## **v1.1.2**
 
 -   [ui] changed the width of toast to fit
