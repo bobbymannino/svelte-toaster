@@ -1,11 +1,11 @@
 <script>import { toaster } from "./toast";
 import Toast from "./Toast.svelte";
 import { quadInOut } from "svelte/easing";
-import { fly } from "svelte/transition";
+import { scale, fly } from "svelte/transition";
 import { flip } from "svelte/animate";
 const ANIMATION_DURATION = 250;
 const ANIMATION_TIMING = quadInOut;
-const ANIMATION_X = 32;
+const ANIMATION_X = -24;
 export let xPlacement = "left";
 export let yPlacement = "bottom";
 </script>
@@ -13,8 +13,8 @@ export let yPlacement = "bottom";
 <ul data-x-placement={xPlacement} data-y-placement={yPlacement}>
 	{#each $toaster as toast (toast.id)}
 		<li
-			in:fly={{ duration: ANIMATION_DURATION, easing: ANIMATION_TIMING, x: -1 * ANIMATION_X }}
-			out:fly={{ duration: ANIMATION_DURATION, easing: ANIMATION_TIMING, x: -1 * ANIMATION_X }}
+			out:scale={{ duration: ANIMATION_DURATION, easing: ANIMATION_TIMING }}
+			in:fly={{ duration: ANIMATION_DURATION, easing: ANIMATION_TIMING, x: ANIMATION_X }}
 			animate:flip={{ duration: ANIMATION_DURATION, easing: ANIMATION_TIMING }}
 		>
 			<Toast {toast} />

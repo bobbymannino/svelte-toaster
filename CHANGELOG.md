@@ -1,5 +1,10 @@
 # **Changelog**
 
+## **v1.1.1**
+
+-   [ui] changed the animation to be more subtle
+-   [ui] smaller icon on toast
+
 ## **v1.1.0**
 
 -   [fix] fixed animation bugs

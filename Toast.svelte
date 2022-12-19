@@ -59,8 +59,8 @@ onMount(() => {
 
 	.toast__icon svg {
 		display: block;
-		width: 2.4rem;
-		height: 2.4rem;
+		width: 2rem;
+		height: 2rem;
 	}
 
 	.toast__body {
