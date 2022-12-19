@@ -37,6 +37,8 @@ onMount(() => {
 		border-radius: 0.5rem;
 		overflow: hidden;
 		padding: 0.5rem;
+		width: fit-content;
+		max-width: min(24rem, calc(100vw - 2rem));
 
 		--toast-background-color: #fff;
 		--toast-text-color: #444;

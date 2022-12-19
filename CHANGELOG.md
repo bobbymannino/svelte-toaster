@@ -1,5 +1,9 @@
 # **Changelog**
 
+## **v1.1.2**
+
+-   [ui] changed the width of toast to fit
+
 ## **v1.1.1**
 
 -   [ui] changed the animation to be more subtle

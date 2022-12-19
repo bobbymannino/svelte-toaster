@@ -25,8 +25,6 @@ export let yPlacement = "bottom";
 <style>
 	ul {
 		position: fixed;
-		width: min(100%, 24rem);
-		max-width: calc(100% - 2rem);
 		z-index: 9999;
 		list-style: none;
 		display: flex;
