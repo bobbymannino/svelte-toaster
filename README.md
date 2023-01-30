@@ -13,7 +13,7 @@ A notification system that's:
 
 ## **Demo**
 
-[Demo Site](https://bobbymannino.vercel.app/svelte-toaster)
+[Demo Site](https://bobbymannino.vercel.app/npm-packages/svelte-toaster)
 
 ---
 
